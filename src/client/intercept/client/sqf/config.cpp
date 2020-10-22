@@ -150,6 +150,10 @@ namespace intercept {
             return host::functions.invoke_raw_unary(__sqf::unary__getarray__config__ret__array, config_);
         }
 
+        config config_of(const object &obj_) {
+            return host::functions.invoke_raw_unary(__sqf::unary__configof__object__ret__config, obj_);
+        }
+
         game_value get_mission_config_value(sqf_string_const_ref attribute_) {
             return host::functions.invoke_raw_unary(__sqf::unary__getmissionconfigvalue__string_array__ret__array_string, attribute_);
         }
